@@ -1,8 +1,6 @@
-# Knife::Ansible::Inventory
+# knife-ansible-inventory
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/knife/ansible/inventory`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Custom [Chef knife plugin](https://docs.chef.io/plugin_knife_custom.html) that returns Chef nodes in a JSON format suitable for [a custom Ansible inventory](http://docs.ansible.com/ansible/dev_guide/developing_inventory.html).
 
 ## Installation
 
@@ -22,7 +20,16 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```shell
+$ knife ansible inventory
+    --group-by-attribute ATTRIBUTE
+    --host-attribute ATTRIBUTE
+    --hostvars RETURNED_KEY=ATTRIBUTE.PATH[,RETURNED_KEY=ATTRIBUTE.PATH]
+    --query QUERY
+    --help
+```
+
+See the [`spec/`](/spec/) directory for examples of commands and their output JSON.
 
 ## Development
 
@@ -32,10 +39,8 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/Austin Heiman/knife-ansible-inventory.
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/atheiman/knife-ansible-inventory.
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-

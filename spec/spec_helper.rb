@@ -1,11 +1,3 @@
-require "bundler/setup"
-require "knife/ansible/inventory"
-
-RSpec.configure do |config|
-  # Enable flags like --only-failures and --next-failure
-  config.example_status_persistence_file_path = ".rspec_status"
-
-  config.expect_with :rspec do |c|
-    c.syntax = :expect
-  end
-end
+require 'bundler/setup'
+require 'chef/knife'
+require 'chef/knife/ansible_inventory'
